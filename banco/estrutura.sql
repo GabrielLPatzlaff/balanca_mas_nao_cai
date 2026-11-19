@@ -1,5 +1,4 @@
--- Estrutura do banco do projeto Balança mas não cai.
--- Extraída do dump da atividade; sem registros de usuários.
+
 CREATE DATABASE IF NOT EXISTS `balanca_mas_nao_cai` CHARACTER SET utf8mb4;
 USE `balanca_mas_nao_cai`;
 
