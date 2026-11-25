@@ -35,26 +35,51 @@ public class TelaManutencaoFuncoes extends javax.swing.JFrame {
 
         btnIncluir.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         btnIncluir.setText("Incluir");
+        btnIncluir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnIncluirActionPerformed(evt);
+            }
+        });
         btnIncluir.setForeground(new java.awt.Color(255, 255, 255));
         btnIncluir.setBackground(new java.awt.Color(66, 102, 77));
 
         btnConsultar.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         btnConsultar.setText("Consultar");
+        btnConsultar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnConsultarActionPerformed(evt);
+            }
+        });
         btnConsultar.setForeground(new java.awt.Color(255, 255, 255));
         btnConsultar.setBackground(new java.awt.Color(66, 102, 77));
 
         btnAlterar.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         btnAlterar.setText("Alterar");
+        btnAlterar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAlterarActionPerformed(evt);
+            }
+        });
         btnAlterar.setForeground(new java.awt.Color(255, 255, 255));
         btnAlterar.setBackground(new java.awt.Color(66, 102, 77));
 
         btnExcluir.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         btnExcluir.setText("Excluir");
+        btnExcluir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnExcluirActionPerformed(evt);
+            }
+        });
         btnExcluir.setForeground(new java.awt.Color(255, 255, 255));
         btnExcluir.setBackground(new java.awt.Color(66, 102, 77));
 
         btnVoltar.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         btnVoltar.setText("Voltar");
+        btnVoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVoltarActionPerformed(evt);
+            }
+        });
         btnVoltar.setForeground(new java.awt.Color(255, 255, 255));
         btnVoltar.setBackground(new java.awt.Color(66, 102, 77));
 
@@ -120,6 +145,27 @@ public class TelaManutencaoFuncoes extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnIncluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIncluirActionPerformed
+        new TelaIncluirFuncoes().setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnIncluirActionPerformed
+    private void btnConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultarActionPerformed
+        new TelaConsultarFuncoes().setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnConsultarActionPerformed
+    private void btnAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlterarActionPerformed
+        new TelaAlterarFuncoes().setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnAlterarActionPerformed
+    private void btnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExcluirActionPerformed
+        new TelaExcluirFuncoes().setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnExcluirActionPerformed
+    private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
+        new TelaMenuPrincipal().setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnVoltarActionPerformed
 
     public static void main(String[] args) {
         java.awt.EventQueue.invokeLater(() -> new TelaManutencaoFuncoes().setVisible(true));

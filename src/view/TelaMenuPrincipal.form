@@ -147,6 +147,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Fases"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnFasesActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnEngenheiros">
           <Properties>
@@ -161,6 +164,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Engenheiros"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEngenheirosActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnFuncoes">
           <Properties>
@@ -175,6 +181,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Fun&#xe7;&#xf5;es"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnFuncoesActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnUsuarios">
           <Properties>
@@ -189,6 +198,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Usu&#xe1;rios"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnUsuariosActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnVoltar">
           <Properties>
@@ -203,6 +215,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Sair"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnVoltarActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

@@ -57,11 +57,21 @@ public class TelaEditarFuncoes extends javax.swing.JFrame {
 
         btnLimpar.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         btnLimpar.setText("Limpar");
+        btnLimpar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLimparActionPerformed(evt);
+            }
+        });
         btnLimpar.setForeground(new java.awt.Color(255, 255, 255));
         btnLimpar.setBackground(new java.awt.Color(66, 102, 77));
 
         btnVoltar.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         btnVoltar.setText("Voltar");
+        btnVoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVoltarActionPerformed(evt);
+            }
+        });
         btnVoltar.setForeground(new java.awt.Color(255, 255, 255));
         btnVoltar.setBackground(new java.awt.Color(66, 102, 77));
 
@@ -139,6 +149,16 @@ public class TelaEditarFuncoes extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
+        new TelaAlterarFuncoes().setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnVoltarActionPerformed
+    private void btnLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimparActionPerformed
+        txtCampo0.setText("");
+        txtCampo1.setText("");
+        txtCampo1.requestFocus();
+    }//GEN-LAST:event_btnLimparActionPerformed
 
     public static void main(String[] args) {
         java.awt.EventQueue.invokeLater(() -> new TelaEditarFuncoes().setVisible(true));

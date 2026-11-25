@@ -70,6 +70,11 @@ public class TelaExcluirFases extends javax.swing.JFrame {
 
         btnVoltar.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         btnVoltar.setText("Voltar");
+        btnVoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVoltarActionPerformed(evt);
+            }
+        });
         btnVoltar.setForeground(new java.awt.Color(255, 255, 255));
         btnVoltar.setBackground(new java.awt.Color(66, 102, 77));
 
@@ -129,6 +134,11 @@ public class TelaExcluirFases extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
+        new TelaManutencaoFases().setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnVoltarActionPerformed
 
     public static void main(String[] args) {
         java.awt.EventQueue.invokeLater(() -> new TelaExcluirFases().setVisible(true));

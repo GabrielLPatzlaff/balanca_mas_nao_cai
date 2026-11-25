@@ -35,26 +35,51 @@ public class TelaMenuPrincipal extends javax.swing.JFrame {
 
         btnFases.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         btnFases.setText("Fases");
+        btnFases.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnFasesActionPerformed(evt);
+            }
+        });
         btnFases.setForeground(new java.awt.Color(255, 255, 255));
         btnFases.setBackground(new java.awt.Color(66, 102, 77));
 
         btnEngenheiros.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         btnEngenheiros.setText("Engenheiros");
+        btnEngenheiros.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEngenheirosActionPerformed(evt);
+            }
+        });
         btnEngenheiros.setForeground(new java.awt.Color(255, 255, 255));
         btnEngenheiros.setBackground(new java.awt.Color(66, 102, 77));
 
         btnFuncoes.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         btnFuncoes.setText("Funções");
+        btnFuncoes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnFuncoesActionPerformed(evt);
+            }
+        });
         btnFuncoes.setForeground(new java.awt.Color(255, 255, 255));
         btnFuncoes.setBackground(new java.awt.Color(66, 102, 77));
 
         btnUsuarios.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         btnUsuarios.setText("Usuários");
+        btnUsuarios.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUsuariosActionPerformed(evt);
+            }
+        });
         btnUsuarios.setForeground(new java.awt.Color(255, 255, 255));
         btnUsuarios.setBackground(new java.awt.Color(66, 102, 77));
 
         btnVoltar.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         btnVoltar.setText("Sair");
+        btnVoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVoltarActionPerformed(evt);
+            }
+        });
         btnVoltar.setForeground(new java.awt.Color(255, 255, 255));
         btnVoltar.setBackground(new java.awt.Color(66, 102, 77));
 
@@ -120,6 +145,27 @@ public class TelaMenuPrincipal extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnFasesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFasesActionPerformed
+        new TelaManutencaoFases().setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnFasesActionPerformed
+    private void btnEngenheirosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEngenheirosActionPerformed
+        new TelaManutencaoEngenheiros().setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnEngenheirosActionPerformed
+    private void btnFuncoesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFuncoesActionPerformed
+        new TelaManutencaoFuncoes().setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnFuncoesActionPerformed
+    private void btnUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUsuariosActionPerformed
+        new TelaManutencaoUsuarios().setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnUsuariosActionPerformed
+    private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
+        new TelaLogin().setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnVoltarActionPerformed
 
     public static void main(String[] args) {
         java.awt.EventQueue.invokeLater(() -> new TelaMenuPrincipal().setVisible(true));
