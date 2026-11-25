@@ -11,7 +11,6 @@ public class Conexao {
         + "?serverTimezone=America/Sao_Paulo&connectTimeout=10000";
 
     private static final String USUARIO = "root";
-     // O usuario precisa configurar a senha abaixo (via propriedade db.password ou variavel de ambiente DB_PASSWORD)
     private static final String SENHA = 
         System.getProperty("db.password", System.getenv("DB_PASSWORD"));
 

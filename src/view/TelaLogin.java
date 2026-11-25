@@ -1,5 +1,9 @@
 package view;
 
+import dao.UsuarioDAO;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
+
 public class TelaLogin extends javax.swing.JFrame {
 
     public TelaLogin() {
@@ -12,6 +16,11 @@ public class TelaLogin extends javax.swing.JFrame {
         btnRetangulo14 = new javax.swing.JButton();
         btnRetangulo14.setFont(new java.awt.Font("SansSerif", 1, 14));
         btnRetangulo14.setText("Limpar");
+        btnRetangulo14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRetangulo14ActionPerformed(evt);
+            }
+        });
         btnRetangulo14.setBackground(new java.awt.Color(0xe7ece7));
         btnRetangulo14.setForeground(new java.awt.Color(0x20392c));
         btnRetangulo14.setBorderPainted(false);
@@ -19,13 +28,18 @@ public class TelaLogin extends javax.swing.JFrame {
         btnEntrar12 = new javax.swing.JButton();
         btnEntrar12.setFont(new java.awt.Font("SansSerif", 1, 14));
         btnEntrar12.setText("Entrar");
+        btnEntrar12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEntrar12ActionPerformed(evt);
+            }
+        });
         btnEntrar12.setBackground(new java.awt.Color(0x365642));
         btnEntrar12.setForeground(new java.awt.Color(0xffffff));
         btnEntrar12.setBorderPainted(false);
         btnEntrar12.setFocusPainted(false);
         pwdSenha9 = new javax.swing.JPasswordField();
         pwdSenha9.setFont(new java.awt.Font("SansSerif", 0, 13));
-        pwdSenha9.setText("12345678");
+        pwdSenha9.setText("");
         pwdSenha9.setForeground(new java.awt.Color(0x8b978f));
         pwdSenha9.setBackground(java.awt.Color.WHITE);
         pwdSenha9.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0xdde5dd)));
@@ -35,7 +49,7 @@ public class TelaLogin extends javax.swing.JFrame {
         lblSenha8.setForeground(new java.awt.Color(0x68766c));
         txtEmail5 = new javax.swing.JTextField();
         txtEmail5.setFont(new java.awt.Font("SansSerif", 0, 13));
-        txtEmail5.setText("seuemail@exemplo.com");
+        txtEmail5.setText("");
         txtEmail5.setForeground(new java.awt.Color(0x8b978f));
         txtEmail5.setBackground(java.awt.Color.WHITE);
         txtEmail5.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0xdde5dd)));
@@ -161,6 +175,31 @@ public class TelaLogin extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnEntrar12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrar12ActionPerformed
+      String email = txtEmail5.getText().trim();
+      String senha = new String(pwdSenha9.getPassword());
+      if (email.isEmpty() || senha.isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Preencha o e-mail e a senha.");
+        return;
+      }
+      try {
+        UsuarioDAO dao = new UsuarioDAO();
+        if (dao.autenticar(email, senha)) {
+          new TelaMenuPrincipal().setVisible(true);
+          dispose();
+        } else {
+          JOptionPane.showMessageDialog(this, "E-mail ou senha incorretos.");
+        }
+      } catch (SQLException erro) {
+        JOptionPane.showMessageDialog(this, "Erro ao conectar ao banco: " + erro.getMessage());
+      }
+    }//GEN-LAST:event_btnEntrar12ActionPerformed
+    private void btnRetangulo14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRetangulo14ActionPerformed
+        txtEmail5.setText("");
+        pwdSenha9.setText("");
+        txtEmail5.requestFocus();
+    }//GEN-LAST:event_btnRetangulo14ActionPerformed
 
     public static void main(String[] args) {
         java.awt.EventQueue.invokeLater(() -> new TelaLogin().setVisible(true));
